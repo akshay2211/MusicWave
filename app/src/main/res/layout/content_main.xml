@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ak.sh.ay.samplemusicwave.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:padding="5dp"
+        android:text="Sound used “World Gang” by Jay Man www.ourmusicbox.com"
+        android:textColor="@color/colorPrimary"
+        android:textSize="9dp" />
+
+    <ak.sh.ay.musicwave.MusicWave
+        android:id="@+id/musicWave"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:colorGradient="true"
+        app:endColor="@color/colorEnd"
+        app:startColor="@color/colorStart"
+        app:waveColor="@color/colorAccent"
+        app:waveThickness="1" />
+</FrameLayout>

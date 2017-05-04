@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MusicWave">
+        <attr name="waveThickness" format="float" />
+        <attr name="waveColor" format="color" />
+        <attr name="colorGradient" format="boolean" />
+        <attr name="startColor" format="color" />
+        <attr name="endColor" format="color" />
+
+    </declare-styleable>
+</resources>

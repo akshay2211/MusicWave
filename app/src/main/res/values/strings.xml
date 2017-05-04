@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SampleMusicWave</string>
+    <string name="action_color_solid">Solid Color</string>
+    <string name="action_color_gradient">Gradient</string>
+</resources>
