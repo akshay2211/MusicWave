@@ -1,24 +1,36 @@
 # MusicWave
 With MusicWave represent your Sound in a gradient colored Visualization
+
 Currently under Development
 
 ![](media/musicwave_image.png)
+![](media/musicwave_gif.gif)
 
 
 Usage
 -----
 
+Add Permission in Manifest file.
 ```xml
-  <ak.sh.ay.musicwave.MusicWave
+ <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+```
+xml
+```xml
+    <ak.sh.ay.musicwave.MusicWave
          android:id="@+id/musicWave"
          android:layout_width="match_parent"
          android:layout_height="match_parent"
          app:colorGradient="true"
          app:endColor="@color/colorEnd"
          app:startColor="@color/colorStart"
-         app:waveColor="@color/colorAccent"
          app:waveThickness="1" />
 ```
+For single color wave
+```xml
+         app:colorGradient="false"
+         app:waveColor="@color/colorAccent"
+```
+Refer Sample App for detailed description of usage
 
 Download
 --------
