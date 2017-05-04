@@ -1,20 +1,26 @@
 package ak.sh.ay.samplemusicwave;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.media.audiofx.Visualizer;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import ak.sh.ay.musicwave.MusicWave;
 
 public class MainActivity extends AppCompatActivity {
+    private static final int MY_PERMISSIONS_REQUEST_RECORD_AUDIO = 9976;
     FloatingActionButton fab;
     private MediaPlayer mMediaPlayer;
     private Visualizer mVisualizer;
@@ -26,26 +32,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, MY_PERMISSIONS_REQUEST_RECORD_AUDIO);
+        } else {
         initialise();
-        fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String status;
-                if (mMediaPlayer.isPlaying()) {
-                    status = "Sound Paused";
-                    mMediaPlayer.pause();
-                    fab.setImageResource(android.R.drawable.ic_media_play);
-                } else {
-                    status = "Sound Started";
-                    mVisualizer.setEnabled(true);
-                    mMediaPlayer.start();
-                    fab.setImageResource(android.R.drawable.ic_media_pause);
-                }
-                Snackbar.make(view, status, Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show();
-            }
-        });
+        }
     }
 
     @Override
@@ -67,6 +58,25 @@ public class MainActivity extends AppCompatActivity {
             public void onCompletion(MediaPlayer mediaPlayer) {
                 mVisualizer.setEnabled(false);
                 fab.setImageResource(android.R.drawable.ic_media_play);
+            }
+        });
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String status;
+                if (mMediaPlayer.isPlaying()) {
+                    status = "Sound Paused";
+                    mMediaPlayer.pause();
+                    fab.setImageResource(android.R.drawable.ic_media_play);
+                } else {
+                    status = "Sound Started";
+                    mVisualizer.setEnabled(true);
+                    mMediaPlayer.start();
+                    fab.setImageResource(android.R.drawable.ic_media_pause);
+                }
+                Snackbar.make(view, status, Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show();
             }
         });
     }
@@ -111,7 +121,28 @@ public class MainActivity extends AppCompatActivity {
             musicWave.getConfig().setColorGradient(true);
             return true;
         }
+        if (id == R.id.action_sound_usage) {
+            Snackbar.make(fab, "Sound used “Unrelenting” by Jay Man www.ourmusicbox.com", Snackbar.LENGTH_SHORT)
+                    .setAction("Action", null).show();
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_RECORD_AUDIO: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    initialise();
+                } else {
+                    Toast.makeText(MainActivity.this, "Allow Permission from settings", Toast.LENGTH_LONG).show();
+                }
+                return;
+            }
+        }
     }
 }

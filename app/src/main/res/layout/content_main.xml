@@ -8,14 +8,6 @@
     tools:context="ak.sh.ay.samplemusicwave.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:padding="5dp"
-        android:text="Sound used “World Gang” by Jay Man www.ourmusicbox.com"
-        android:textColor="@color/colorPrimary"
-        android:textSize="9dp" />
 
     <ak.sh.ay.musicwave.MusicWave
         android:id="@+id/musicWave"

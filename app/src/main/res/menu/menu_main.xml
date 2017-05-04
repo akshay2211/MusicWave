@@ -12,4 +12,9 @@
         android:orderInCategory="99"
         android:title="@string/action_color_gradient"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_sound_usage"
+        android:orderInCategory="100"
+        android:title="@string/action_sound_usage"
+        app:showAsAction="never" />
 </menu>
