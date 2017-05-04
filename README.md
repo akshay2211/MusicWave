@@ -1,6 +1,6 @@
 # MusicWave
 With MusicWave represent your Sound in a gradient colored Visualization
-Currently under Development 
+Currently under Development
 
 ![](media/musicwave_image.png)
 
@@ -23,7 +23,7 @@ Usage
 Download
 --------
 
- [ ![Download](https://api.bintray.com/packages/fxn769/android_projects/Oblique/images/download.svg) ](https://bintray.com/fxn769/android_projects/Oblique/_latestVersion)  or grab via Gradle:
+ [ ![Download](https://api.bintray.com/packages/fxn769/android_projects/Oblique/images/download.svg) ](https://bintray.com/fxn769/android_projects/MusicWave/_latestVersion)  or grab via Gradle:
 ```groovy
 compile 'com.fxn769:musicwave:1.0'
 ```
