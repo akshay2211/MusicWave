@@ -1,7 +1,8 @@
+[![API](https://img.shields.io/badge/API-9%2B-blue.svg?style=flat-square)](https://android-arsenal.com/api?level=9)
+
 # MusicWave
 With MusicWave represent your Sound in a gradient colored Visualization
 
-Currently under Development
 
 ![](media/musicwave_image.png)
 ![](media/musicwave_gif.gif)
