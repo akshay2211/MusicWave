@@ -60,20 +60,18 @@ Snapshots of the development version are available in [Sonatype's `snapshots` re
 
 
 
-License
---------
 
-    Copyright 2017 Akshay Sharma
+## License
+Licensed under the Apache License, Version 2.0, [click here for the full license](/LICENSE.txt).
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+## Author & support
+This project was created by [Akshay Sharma](https://akshay2211.github.io/).
 
-       http://www.apache.org/licenses/LICENSE-2.0
+> If you appreciate my work, consider buying me a cup of :coffee: to keep me recharged :metal: by [PayPal](https://www.paypal.me/akshay2211)
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+> I love using my work and I'm available for contract work. Freelancing helps to maintain and keep [my open source projects](https://github.com/akshay2211/) up to date!
+
+[![forthebadge](http://forthebadge.com/images/badges/built-for-android.svg)](http://forthebadge.com)
+
+
  [snap]: https://oss.sonatype.org/content/repositories/snapshots/
