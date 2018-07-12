@@ -1,3 +1,4 @@
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-MusicWave-green.svg?style=flat-square)](https://android-arsenal.com/details/1/5699)
 [![API](https://img.shields.io/badge/API-9%2B-blue.svg?style=flat-square)](https://android-arsenal.com/api?level=9)
 
 # MusicWave
