@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/358460b4479a4068939da1cc3e72f44d)](https://app.codacy.com/app/akshay2211/MusicWave?utm_source=github.com&utm_medium=referral&utm_content=akshay2211/MusicWave&utm_campaign=Badge_Grade_Dashboard)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-MusicWave-green.svg?style=flat-square)](https://android-arsenal.com/details/1/5699)
 [![API](https://img.shields.io/badge/API-9%2B-blue.svg?style=flat-square)](https://android-arsenal.com/api?level=9)
 
